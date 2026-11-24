@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nurislam Web Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070c17;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --blue: #168cff;
+    --dark: #080e1a;
+    --card: #151e32;
+}
+
+.container {
+    width: 88%;
+    max-width: 1350px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.logo-icon {
+    font-size: 48px;
+    color: var(--blue);
+    font-weight: 900;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.header-button {
+    padding: 13px 22px;
+    border: 1px solid #83aaff;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.header-button:hover {
+    background: var(--blue);
+}
+
+/* HERO */
+
+.hero {
+    background:
+        radial-gradient(ellipse at 85% 45%, #103d86 0%, transparent 43%),
+        linear-gradient(110deg, #080e19, #080e19);
+}
+
+.hero-content {
+    min-height: 420px;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    align-items: center;
+}
+
+.hero-text {
+    padding: 30px 0;
+    z-index: 2;
+}
+
+.tag {
+    display: inline-block;
+    padding: 11px 17px;
+    background: #17233b;
+    border: 1px solid #234d87;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 6vw, 82px);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -3px;
+    margin-bottom: 17px;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #d5dbea;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 25px;
+    border-radius: 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-blue {
+    background: linear-gradient(100deg, #159cff, #2461f5);
+    box-shadow: 0 8px 25px #087cff40;
+}
+
+.btn-outline {
+    border: 1px solid #8baeff;
+}
+
+.hero-visual {
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 190px;
+    border: 4px solid #087cff;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+    top: 110px;
+    filter: drop-shadow(0 0 15px #087cff);
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #087cff;
+    opacity: .17;
+    filter: blur(90px);
+}
+
+.hero-visual img {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+/* SERVICES */
+
+.services {
+    background: linear-gradient(120deg, #090f1b, #080d18);
+    border-radius: 28px 28px 0 0;
+    padding: 22px 0 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #c4cddd;
+    font-size: 15px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: linear-gradient(140deg, #19243b, #151d30);
+    border: 1px solid #202c45;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    gap: 17px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--blue);
+}
+
+.service-icon {
+    color: var(--blue);
+    font-size: 39px;
+    font-weight: bold;
+}
+
+.service-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #c7d0df;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    padding: 38px 0;
+}
+
+.portfolio-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-heading h2 {
+    font-size: 35px;
+}
+
+.portfolio-heading p {
+    color: #c4cddd;
+    margin-top: 5px;
+}
+
+.all-projects {
+    border: 1px solid #8baeff;
+    border-radius: 30px;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project {
+    background: #151e32;
+    border: 1px solid #26334b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+    text-decoration: none;
+    color: white;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.project-preview {
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.guku-preview {
+    background: linear-gradient(135deg, #f8dce8, #f5b9d1);
+    color: #1c1420;
+    flex-direction: column;
+    text-align: center;
+}
+
+.guku-preview h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.guku-preview p {
+    color: #29202a;
+}
+
+.dental-preview {
+    background: linear-gradient(135deg, #e4f3ff, #c1e1ff);
+    color: #17345a;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dental-preview h3 {
+    font-size: 24px;
+}
+
+.dental-preview span {
+    color: #168cff;
+    font-size: 45px;
+}
+
+.new-preview {
+    background: radial-gradient(circle, #263c60, #101827);
+    flex-direction: column;
+}
+
+.new-preview span {
+    font-size: 55px;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.project-info p {
+    font-size: 13px;
+    color: #b9c5d8;
+}
+
+.project-info small {
+    display: block;
+    color: var(--blue);
+    margin-top: 10px;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 45px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 35px;
+    background: linear-gradient(120deg, #17243e, #101827);
+    border: 1px solid #26334c;
+    border-radius: 20px;
+}
+
+.about-logo {
+    font-size: 90px;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--blue);
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #c9d3e3;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* REVIEWS */
+
+.reviews {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.reviews-content {
+    padding: 30px;
+    border: 1px dashed #33435f;
+    border-radius: 15px;
+    color: #b8c6dc;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 35px;
+    margin: 30px 0;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #0750a5, #3269ec);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.contact-btn {
+    background: #08c878;
+    box-shadow: 0 0 25px #00e58b65;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050a13;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: #9eabc0;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width: 1050px) {
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 750px) {
+    header {
+        height: auto;
+        padding: 20px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        order: 3;
+    }
+
+    .header-button {
+        font-size: 11px;
+        padding: 10px 14px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 40px 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        height: 330px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-heading {
+        gap: 10px;
+    }
+
+    .portfolio-heading h2 {
+        font-size: 28px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 390px) {
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .tag {
+        font-size: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 14px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">N</div>
+        <div>Nurislam<br>Web Studio</div>
+    </div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#about">Обо мне</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <a href="#" class="header-button" onclick="whatsapp(event)">
+        ◉ Написать в WhatsApp
+    </a>
+</header>
+
+</div>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <div class="tag">
+                Веб-разработка • Дизайн • Развитие бизнеса
+            </div>
+
+            <h1>
+                Nurislam<br>
+                Web <span class="blue">Studio</span>
+            </h1>
+
+            <p>
+                Создаю современные сайты, которые
+                привлекают клиентов и развивают ваш бизнес
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-blue" onclick="whatsapp(event)">
+                    ➤ Написать в WhatsApp
+                </a>
+
+                <a href="#portfolio" class="btn btn-outline">
+                    ▶ Посмотреть работы
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual"></div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Мои <span class="blue">услуги</span></h2>
+            <p>Профессиональные решения для вашего бизнеса</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">&lt;/&gt;</div>
+                <div>
+                    <h3>Разработка сайтов</h3>
+                    <p>Сайты любой сложности — от лендинга до интернет-магазина.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">◉</div>
+                <div>
+                    <h3>Дизайн UI/UX</h3>
+                    <p>Современный и удобный дизайн, который нравится клиентам.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▥</div>
+                <div>
+                    <h3>Продвижение SEO</h3>
+                    <p>Помогаю сайту стать заметнее в поисковых системах.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙</div>
+                <div>
+                    <h3>Поддержка и развитие</h3>
+                    <p>Техническая поддержка и обновления сайта.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="portfolio-heading">
+            <div>
+                <h2>Моё <span class="blue">портфолио</span></h2>
+                <p>Примеры моих работ</p>
+            </div>
+
+            <a href="#contacts" class="all-projects">
+                Обсудить проект →
+            </a>
+        </div>
+
+        <div class="projects">
+
+            <a class="project"
+               href="https://mirbek20070927-stack.github.io/guku-faberlic./"
+               target="_blank">
+
+                <div class="project-preview guku-preview">
+                    <h3>GUKU</h3>
+                    <p>FABERLIC</p>
+                    <p>Красота начинается с тебя</p>
+                </div>
+
+                <div class="project-info">
+                    <h3>GUKU Faberlic</h3>
+                    <p>Сайт каталога продукции</p>
+                    <small>Открыть проект ↗</small>
+                </div>
+            </a>
+
+            <div class="project">
+
+                <div class="project-preview new-preview">
+                    <span>💻</span>
+                    <h3>Новый проект</h3>
+                    <p>Скоро здесь будет новая работа</p>
+                </div>
+
+                <div class="project-info">
+                    <h3>Новый проект</h3>
+                    <p>Следующий проект в разработке</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+
+        <div class="about-content">
+            <div class="about-logo">N</div>
+
+            <div>
+                <h2>Обо <span class="blue">мне</span></h2>
+
+                <p>
+                    Меня зовут Нурислам. Я занимаюсь созданием
+                    современных сайтов, разработкой дизайна
+                    и цифровых решений для бизнеса.
+
+                    Моя цель — создавать качественные сайты,
+                    которые помогают компаниям привлекать
+                    новых клиентов и развивать свой бизнес.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Отзывы <span class="blue">клиентов</span></h2>
+            <p>Мнение клиентов о моей работе</p>
+        </div>
+
+        <div class="reviews-content">
+            Отзывы клиентов скоро появятся здесь.
+        </div>
+
+    </div>
+</section>
+
+<section id="contacts">
+    <div class="container">
+
+        <div class="contact">
+
+            <div>
+                <h2>Готовы обсудить ваш проект?</h2>
+                <p>
+                    Напишите мне в WhatsApp,<br>
+                    и я помогу подобрать лучшее решение.
+                </p>
+            </div>
+
+            <a href="#" class="btn contact-btn"
+               onclick="whatsapp(event)">
+                ◉ Написать в WhatsApp →
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <h3>Nurislam Web Studio</h3>
+        <p>© 2026 Nurislam Web Studio. Все права защищены.</p>
+        <a href="#home" style="color:#168cff;text-decoration:none">
+            Наверх ↑
+        </a>
+    </div>
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "996709270607";
+
+function whatsapp(event) {
+    if (event) event.preventDefault();
+
+    window.open(
+        "https://wa.me/" + WHATSAPP_NUMBER,
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>

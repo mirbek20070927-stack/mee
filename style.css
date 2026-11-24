@@ -1,0 +1,391 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070d18;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+    background: #080e19;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    font-size: 55px;
+    font-weight: bold;
+    color: #168cff;
+}
+
+.logo h3 {
+    font-size: 17px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #168cff;
+}
+
+.nav-btn {
+    color: white;
+    border: 1px solid #168cff;
+    padding: 13px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 420px;
+    padding: 35px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        radial-gradient(circle at 80% 50%, #103a78, transparent 40%),
+        #080e19;
+}
+
+.hero-text {
+    max-width: 600px;
+    z-index: 1;
+}
+
+.tag {
+    display: inline-block;
+    background: #17243d;
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 78px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #168cff;
+}
+
+.hero-text p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #d5dbea;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.buttons a {
+    padding: 17px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.primary {
+    background: linear-gradient(90deg, #159dff, #2361f5);
+}
+
+.secondary {
+    border: 1px solid #8ab4ff;
+}
+
+.hero-image {
+    width: 43%;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.services {
+    padding: 25px 6% 45px;
+    background: #090f1c;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.subtitle {
+    color: #cbd4e5;
+    margin: 8px 0 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    background: #172137;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: left;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    background: #1d2c49;
+}
+
+.icon {
+    font-size: 35px;
+    color: #168cff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #c3cede;
+    line-height: 1.5;
+}
+
+.portfolio {
+    padding: 35px 6%;
+}
+
+.portfolio > p {
+    margin: 8px 0 20px;
+    color: #cbd4e5;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: #172137;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 18px;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project h3,
+.project p {
+    margin: 12px 15px 0;
+}
+
+.project p {
+    color: #bfcadd;
+}
+
+.coming {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    text-align: center;
+}
+
+.laptop {
+    font-size: 55px;
+}
+
+.about,
+.reviews {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.about p,
+.reviews p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #cbd4e5;
+}
+
+.contact {
+    margin: 25px 6%;
+    padding: 35px;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #064b9c, #2868e9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.whatsapp-btn {
+    background: #09c878;
+    color: white;
+    padding: 17px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #050a13;
+}
+
+footer p {
+    margin-top: 10px;
+    color: #aab5c8;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 320px;
+        margin-top: 25px;
+    }
+
+    .service-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.service-card {
+    background: linear-gradient(
+        145deg,
+        #17243B,
+        #101827
+    );
+    border: 1px solid rgba(50, 135, 255, 0.18);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #168CFF;
+    box-shadow: 0 10px 30px rgba(22, 140, 255, 0.18);
+}
+
+.project {
+    background: #111D32;
+    border: 1px solid #263957;
+    transition: .3s;
+}
+
+.project:hover {
+    border-color: #168CFF;
+    box-shadow: 0 10px 30px rgba(22, 140, 255, .15);
+}
